@@ -1,8 +1,9 @@
+import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {Button, Gap, Header, TextInput} from '../../components';
 
-const SignIn = () => {
+const SignIn = ({navigation}) => {
   return (
     <View style={styles.page}>
       <Header title="Sign In" subTitle="Find youre best ever meal" />
@@ -16,7 +17,12 @@ const SignIn = () => {
         <Gap height={24} />
         <Button text="Sign In" />
         <Gap height={12} />
-        <Button text="Create New Account" color="#8D92A3" textColor="white" />
+        <Button
+          text="Create New Account"
+          color="#8D92A3"
+          textColor="white"
+          onPress={() => navigation.navigate('SignUp')}
+        />
         <Text>Sign In Page</Text>
       </View>
     </View>
