@@ -4,7 +4,7 @@ import {StyleSheet, Text, View, TextInput as TextInputRN} from 'react-native';
 const TextInput = () => {
   return (
     <View>
-      <Text style={styles.label}>Email Address</Text>
+      <Text style={styles.label}>Email Address pertama</Text>
       <TextInputRN style={styles.input} placeholder="type your email adrres" />
     </View>
   );
