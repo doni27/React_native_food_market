@@ -5,15 +5,18 @@ import {Button, Gap, Header, TextInput} from '../../components';
 const SignIn = () => {
   return (
     <View style={styles.page}>
-      <Header />
+      <Header title="Sign In" subTitle="Find youre best ever meal" />
       <View style={styles.container}>
-        <TextInput />
+        <TextInput
+          label="Email Address"
+          placeholder="Type your email address"
+        />
         <Gap height={16} />
-        <TextInput />
+        <TextInput label="password" placeholder="Type your password" />
         <Gap height={24} />
-        <Button />
+        <Button text="Sign In" />
         <Gap height={12} />
-        <Button />
+        <Button text="Create New Account" color="#8D92A3" textColor="white" />
         <Text>Sign In Page</Text>
       </View>
     </View>
