@@ -16,7 +16,7 @@ import {
 } from '../../assets/Dummy';
 import {FoodCard} from '../../components/molecules';
 import {Gap} from '../../components';
-import {TabView, SceneMap} from 'react-native-tab-view';
+import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
 
 const FirstRoute = () => (
   <View style={[styles.scene, {backgroundColor: '#ff4081'}]} />
@@ -31,13 +31,37 @@ const initialLayout = {width: Dimensions.get('window').width};
 const Home = () => {
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
-    {key: 'first', title: 'First'},
-    {key: 'second', title: 'Second'},
+    {key: '1', title: 'New Taste'},
+    {key: '2', title: 'popular'},
+    {key: '3', title: 'Recomended'},
   ]);
+  const renderTabBar = props => (
+    <TabBar
+      {...props}
+      indicatorStyle={{
+        backgroundColor: '#020202',
+        height: 3,
+        width: '15%',
+        marginLeft: '3%',
+      }}
+      style={{backgroundColor: 'white'}}
+      tabStyle={{width: 'auto'}}
+      renderLabel={({route, focused, color}) => (
+        <Text
+          style={{
+            fontFamily: 'Poppins-Medium',
+            color: focused ? '#020202' : '#8D92A3',
+          }}>
+          {route.title}
+        </Text>
+      )}
+    />
+  );
 
   const renderScene = SceneMap({
-    first: FirstRoute,
-    second: SecondRoute,
+    1: FirstRoute,
+    2: SecondRoute,
+    3: FirstRoute,
   });
 
   return (
@@ -63,6 +87,7 @@ const Home = () => {
       </View>
       <View style={styles.tabContainer}>
         <TabView
+          renderTabBar={renderTabBar}
           navigationState={{index, routes}}
           renderScene={renderScene}
           onIndexChange={setIndex}
@@ -78,7 +103,6 @@ export default Home;
 const styles = StyleSheet.create({
   page: {
     flex: 1,
-    backgroundColor: 'yellow',
   },
   scene: {
     flex: 1,
