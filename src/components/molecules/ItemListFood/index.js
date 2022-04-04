@@ -3,7 +3,7 @@ import {StyleSheet, Text, View, Image} from 'react-native';
 import {Rating} from '..';
 import {FoodDummy1} from '../../../assets';
 
-const ItemListFood = () => {
+const ItemListFood = ({image}) => {
   return (
     <View
       style={{
@@ -14,7 +14,7 @@ const ItemListFood = () => {
         alignItems: 'center',
       }}>
       <Image
-        source={FoodDummy1}
+        source={image}
         style={{
           width: 60,
           height: 60,

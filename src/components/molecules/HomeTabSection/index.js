@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View, Dimensions, Image} from 'react-native';
 import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
 import {ItemListFood, Rating} from '..';
-import {FoodDummy1} from '../../../assets';
+import {FoodDummy1, FoodDummy2, FoodDummy3, FoodDummy4} from '../../../assets';
 
 const renderTabBar = props => (
   <TabBar
@@ -13,7 +13,13 @@ const renderTabBar = props => (
       width: '15%',
       marginLeft: '3%',
     }}
-    style={{backgroundColor: 'white'}}
+    style={{
+      backgroundColor: 'white',
+      elevation: 0,
+      shadowOpacity: 0,
+      borderBottomColor: '#F2F2F2',
+      borderBottomWidth: 1,
+    }}
     tabStyle={{width: 'auto'}}
     renderLabel={({route, focused, color}) => (
       <Text
@@ -29,16 +35,33 @@ const renderTabBar = props => (
 const NewTaste = () => {
   return (
     <View style={{paddingTop: 8}}>
-      <ItemListFood />
-      <ItemListFood />
-      <ItemListFood />
-      <ItemListFood />
+      <ItemListFood image={FoodDummy1} />
+      <ItemListFood image={FoodDummy2} />
+      <ItemListFood image={FoodDummy3} />
+      <ItemListFood image={FoodDummy4} />
     </View>
   );
 };
-const SecondRoute = () => (
-  <View style={{backgroundColor: '#673ab7', flex: 1}} />
-);
+const Popular = () => {
+  return (
+    <View style={{paddingTop: 8}}>
+      <ItemListFood image={FoodDummy1} />
+      <ItemListFood image={FoodDummy2} />
+      <ItemListFood image={FoodDummy3} />
+      <ItemListFood image={FoodDummy4} />
+    </View>
+  );
+};
+const Recomended = () => {
+  return (
+    <View style={{paddingTop: 8}}>
+      <ItemListFood image={FoodDummy1} />
+      <ItemListFood image={FoodDummy2} />
+      <ItemListFood image={FoodDummy3} />
+      <ItemListFood image={FoodDummy4} />
+    </View>
+  );
+};
 
 const initialLayout = {width: Dimensions.get('window').width};
 
@@ -51,8 +74,8 @@ const HomeTabSection = () => {
   ]);
   const renderScene = SceneMap({
     1: NewTaste,
-    2: SecondRoute,
-    3: NewTaste,
+    2: Popular,
+    3: Recomended,
   });
   return (
     <TabView
@@ -61,6 +84,7 @@ const HomeTabSection = () => {
       renderScene={renderScene}
       onIndexChange={setIndex}
       initialLayout={initialLayout}
+      style={{backgroundColor: 'white'}}
     />
   );
 };
