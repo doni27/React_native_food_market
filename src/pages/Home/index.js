@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {
   StyleSheet,
   Text,
@@ -16,27 +16,29 @@ import {
 } from '../../assets/Dummy';
 import {FoodCard} from '../../components/molecules';
 import {Gap} from '../../components';
-// import {TabView, SceneMap} from 'react-native-tab-view';
+import {TabView, SceneMap} from 'react-native-tab-view';
 
-// const FirstRoute = () => <View style={{backgroundColor: '#ff4081', flex: 1}} />;
+const FirstRoute = () => (
+  <View style={[styles.scene, {backgroundColor: '#ff4081'}]} />
+);
 
-// const SecondRoute = () => (
-//   <View style={{backgroundColor: '#673ab7', flex: 1}} />
-// );
+const SecondRoute = () => (
+  <View style={[styles.scene, {backgroundColor: '#673ab7'}]} />
+);
 
-// const initialLayout = {width: Dimensions.get('window').width};
+const initialLayout = {width: Dimensions.get('window').width};
 
 const Home = () => {
-  // const [index, setIndex] = React.useState(0);
-  // const [routes] = React.useState([
-  //   {key: 'first', title: 'First'},
-  //   {key: 'second', title: 'Second'},
-  // ]);
+  const [index, setIndex] = React.useState(0);
+  const [routes] = React.useState([
+    {key: 'first', title: 'First'},
+    {key: 'second', title: 'Second'},
+  ]);
 
-  // const renderScene = SceneMap({
-  //   first: FirstRoute,
-  //   second: SecondRoute,
-  // });
+  const renderScene = SceneMap({
+    first: FirstRoute,
+    second: SecondRoute,
+  });
 
   return (
     <View style={styles.page}>
@@ -59,14 +61,14 @@ const Home = () => {
           </View>
         </ScrollView>
       </View>
-      {/* <View style={styles.tabContainer}>
+      <View style={styles.tabContainer}>
         <TabView
           navigationState={{index, routes}}
           renderScene={renderScene}
           onIndexChange={setIndex}
           initialLayout={initialLayout}
         />
-      </View> */}
+      </View>
     </View>
   );
 };
@@ -77,6 +79,9 @@ const styles = StyleSheet.create({
   page: {
     flex: 1,
     backgroundColor: 'yellow',
+  },
+  scene: {
+    flex: 1,
   },
   profile: {
     width: 50,
