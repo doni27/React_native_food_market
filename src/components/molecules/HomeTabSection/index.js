@@ -3,6 +3,7 @@ import {StyleSheet, Text, View, Dimensions, Image} from 'react-native';
 import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
 import {ItemListFood, Rating} from '..';
 import {FoodDummy1, FoodDummy2, FoodDummy3, FoodDummy4} from '../../../assets';
+import {useNavigation} from '@react-navigation/native';
 
 const renderTabBar = props => (
   <TabBar
@@ -32,7 +33,8 @@ const renderTabBar = props => (
     )}
   />
 );
-const NewTaste = ({navigation}) => {
+const NewTaste = () => {
+  const navigation = useNavigation();
   return (
     <View style={{paddingTop: 8}}>
       <ItemListFood
@@ -54,7 +56,8 @@ const NewTaste = ({navigation}) => {
     </View>
   );
 };
-const Popular = ({navigation}) => {
+const Popular = () => {
+  const navigation = useNavigation();
   return (
     <View style={{paddingTop: 8}}>
       <ItemListFood
@@ -76,7 +79,8 @@ const Popular = ({navigation}) => {
     </View>
   );
 };
-const Recomended = ({navigation}) => {
+const Recomended = () => {
+  const navigation = useNavigation();
   return (
     <View style={{paddingTop: 8}}>
       <ItemListFood

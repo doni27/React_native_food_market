@@ -11,7 +11,7 @@ import {Rating} from '..';
 
 const ItemListFood = ({image, onPress}) => {
   return (
-    <TouchableOpacity activeOpacity={0.7}>
+    <TouchableOpacity activeOpacity={0.7} onPress={onPress}>
       <View style={styles.container}>
         <Image source={image} style={styles.image} />
         <View style={styles.content}>
