@@ -1,9 +1,13 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {ImageBackground, StyleSheet, Text, View} from 'react-native';
+import {FoodDummy1} from '../../assets';
 
 const FoodDetail = () => {
   return (
     <View>
+      <ImageBackground
+        source={FoodDummy1}
+        style={styles.cover}></ImageBackground>
       <Text>Food Detail Page</Text>
     </View>
   );
@@ -11,4 +15,6 @@ const FoodDetail = () => {
 
 export default FoodDetail;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  cover: {height: 330},
+});
