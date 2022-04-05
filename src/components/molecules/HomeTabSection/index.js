@@ -38,18 +38,22 @@ const NewTaste = () => {
   return (
     <View style={{paddingTop: 8}}>
       <ItemListFood
+        rating={3}
         image={FoodDummy1}
         onPress={() => navigation.navigate('FoodDetail')}
       />
       <ItemListFood
+        rating={3}
         image={FoodDummy2}
         onPress={() => navigation.navigate('FoodDetail')}
       />
       <ItemListFood
+        rating={3}
         image={FoodDummy3}
         onPress={() => navigation.navigate('FoodDetail')}
       />
       <ItemListFood
+        rating={3}
         image={FoodDummy4}
         onPress={() => navigation.navigate('FoodDetail')}
       />
@@ -61,18 +65,22 @@ const Popular = () => {
   return (
     <View style={{paddingTop: 8}}>
       <ItemListFood
+        rating={3}
         image={FoodDummy1}
         onPress={() => navigation.navigate('FoodDetail')}
       />
       <ItemListFood
+        rating={3}
         image={FoodDummy2}
         onPress={() => navigation.navigate('FoodDetail')}
       />
       <ItemListFood
+        rating={3}
         image={FoodDummy3}
         onPress={() => navigation.navigate('FoodDetail')}
       />
       <ItemListFood
+        rating={3}
         image={FoodDummy4}
         onPress={() => navigation.navigate('FoodDetail')}
       />
@@ -84,18 +92,22 @@ const Recomended = () => {
   return (
     <View style={{paddingTop: 8}}>
       <ItemListFood
+        rating={3}
         image={FoodDummy1}
         onPress={() => navigation.navigate('FoodDetail')}
       />
       <ItemListFood
+        rating={3}
         image={FoodDummy2}
         onPress={() => navigation.navigate('FoodDetail')}
       />
       <ItemListFood
+        rating={3}
         image={FoodDummy3}
         onPress={() => navigation.navigate('FoodDetail')}
       />
       <ItemListFood
+        rating={3}
         image={FoodDummy4}
         onPress={() => navigation.navigate('FoodDetail')}
       />
