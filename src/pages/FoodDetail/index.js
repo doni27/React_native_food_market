@@ -7,7 +7,7 @@ import {
   View,
 } from 'react-native';
 import {FoodDummy6, IcBackWhite} from '../../assets';
-import {Button, Rating} from '../../components';
+import {Button, Counter, Rating} from '../../components';
 
 const FoodDetail = () => {
   return (
@@ -24,7 +24,7 @@ const FoodDetail = () => {
               <Text style={styles.title}>Cherry Healthy</Text>
               <Rating />
             </View>
-            <Text>Counter</Text>
+            <Counter />
           </View>
           <Text style={styles.desc}>
             Makanan khas bandung yang cukup sering dipesan oleh anak muda dengan
