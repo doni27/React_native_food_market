@@ -1,10 +1,10 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {FoodDummy1} from '../../assets';
-import {Header, ItemListFood, ItemValue, Button} from '../../components';
+import {Header, ItemListFood, ItemValue, Button, Gap} from '../../components';
 const OrderSumary = ({navigation}) => {
   return (
-    <View>
+    <ScrollView>
       <Header
         title="Payment"
         subTitle="You Deserve better meal"
@@ -44,7 +44,8 @@ const OrderSumary = ({navigation}) => {
           onPress={() => navigation.replace('SuccessOrder')}
         />
       </View>
-    </View>
+      <Gap height={40} />
+    </ScrollView>
   );
 };
 
