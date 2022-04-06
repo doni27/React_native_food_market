@@ -1,12 +1,14 @@
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {IlSuccessSignUp} from '../../assets';
-import {Button, Gap} from '../../components';
+import {IlEmptyOrder} from '../../../assets';
+import {Button, Gap} from '../../atoms';
 
-const SuccessSignUp = ({navigation}) => {
+const EmptyOrder = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.page}>
-      <IlSuccessSignUp />
+      <IlEmptyOrder />
       <Gap height={30} />
       <Text style={styles.title}>Yeay! Completed</Text>
       <Gap height={6} />
@@ -23,7 +25,7 @@ const SuccessSignUp = ({navigation}) => {
   );
 };
 
-export default SuccessSignUp;
+export default EmptyOrder;
 
 const styles = StyleSheet.create({
   page: {

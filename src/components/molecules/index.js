@@ -7,6 +7,7 @@ import Rating from './Rating';
 import ItemListFood from './ItemListFood';
 import Counter from './Counter';
 import ItemValue from './ItemValue';
+import EmptyOrder from './EmptyOrder';
 
 export {
   Header,
@@ -18,4 +19,5 @@ export {
   ItemListFood,
   Counter,
   ItemValue,
+  EmptyOrder,
 };
