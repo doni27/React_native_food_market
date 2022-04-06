@@ -15,7 +15,7 @@ const ItemListFood = ({image, onPress, items, rating}) => {
       <View style={styles.container}>
         <Image source={image} style={styles.image} />
         <View style={styles.content}>
-          <Text style={styles.content}>Soup Bumill</Text>
+          <Text style={styles.content}>Soup Bumilll</Text>
           <Text style={styles.price}>IDR 289.000</Text>
         </View>
         {items && !rating && <Text style={styles.items}>{items} items</Text>}
