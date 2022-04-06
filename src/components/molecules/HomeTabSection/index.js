@@ -36,7 +36,7 @@ const renderTabBar = props => (
 const NewTaste = () => {
   const navigation = useNavigation();
   return (
-    <View style={{paddingTop: 8}}>
+    <View style={{paddingTop: 8, paddingHorizontal: 24}}>
       <ItemListFood
         rating={3}
         image={FoodDummy1}
@@ -63,7 +63,7 @@ const NewTaste = () => {
 const Popular = () => {
   const navigation = useNavigation();
   return (
-    <View style={{paddingTop: 8}}>
+    <View style={{paddingTop: 8, paddingHorizontal: 24}}>
       <ItemListFood
         rating={3}
         image={FoodDummy1}
@@ -90,7 +90,7 @@ const Popular = () => {
 const Recomended = () => {
   const navigation = useNavigation();
   return (
-    <View style={{paddingTop: 8}}>
+    <View style={{paddingTop: 8, paddingHorizontal: 24}}>
       <ItemListFood
         rating={3}
         image={FoodDummy1}
